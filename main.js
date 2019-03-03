@@ -68,7 +68,7 @@ function createWindow () {
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
 
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('src/windows/views/splash.html')
 
   mainWindow.on('closed', function () {
     mainWindow = null
