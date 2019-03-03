@@ -26,8 +26,17 @@ function createWindow () {
     { label: 'Item3', type: 'radio', checked: true },
     { label: 'Item4', type: 'radio' }
   ])
+
   tray.setToolTip('This is my application.')
   tray.setContextMenu(contextMenu)
+
+  mainWindow.on('minimize', () => {
+     mainWindow.hide() 
+  });
+
+  tray.on('click', () => {
+    mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show()
+  })
 
   const name = "Reference"
   const template = [
@@ -79,3 +88,5 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+

@@ -5,12 +5,17 @@
   "scripts": {
     "start": "electron ."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/songurov/toolsHotReload.git"
+  },
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^4.0.6"
   },
   "dependencies": {
+    "nconf": "^0.10.0",
     "opn": "^5.4.0"
   }
 }
